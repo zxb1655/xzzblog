@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/time/time",
+    "pages/my/my",
+    "pages/article/article"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "static/icon/home.png",
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "selectedIconPath": "static/icon/home_active.png"
+      },
+      {
+        "iconPath": "static/icon/time.png",
+        "pagePath": "pages/time/time",
+        "text": "时间线",
+        "selectedIconPath": "static/icon/time_active.png"
+      },
+      {
+        "iconPath": "static/icon/my.png",
+        "pagePath": "pages/my/my",
+        "selectedIconPath": "static/icon/my_active.png",
+        "text": "关于"
+      }
+    ]
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.4",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap13.json"
+}

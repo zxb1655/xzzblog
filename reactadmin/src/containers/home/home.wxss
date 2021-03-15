@@ -1,0 +1,14 @@
+.countHead {
+  display: flex;
+  justify-content: space-around;
+}
+.countHead .articleSum {
+  width: 40%;
+  height: 15vh;
+  background-color: #666;
+}
+.countHead .userSum {
+  width: 40%;
+  height: 15vh;
+  background-color: #666;
+}

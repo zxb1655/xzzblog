@@ -1,0 +1,49 @@
+import Vue from 'vue';
+import {
+  Button,
+  Dropdown,
+  Form,
+  FormItem,
+  DropdownMenu,
+  DropdownItem,
+  Input,
+  Dialog,
+  Drawer,
+  Message,
+  Card,
+  Avatar,
+  Autocomplete,
+  Image,
+  Collapse,
+  CollapseItem,
+  Timeline,
+  TimelineItem,
+  ColorPicker,
+  Tooltip,
+  Menu,
+  MenuItem,
+  Popover,
+} from 'element-ui';
+Vue.prototype.$message = Message;
+Vue.use(Button);
+Vue.use(Dropdown);
+Vue.use(DropdownItem);
+Vue.use(DropdownMenu);
+Vue.use(Input);
+Vue.use(Dialog);
+Vue.use(Form);
+Vue.use(FormItem);
+Vue.use(Drawer);
+Vue.use(Card);
+Vue.use(Avatar);
+Vue.use(Autocomplete);
+Vue.use(Image);
+Vue.use(Collapse);
+Vue.use(CollapseItem);
+Vue.use(Timeline);
+Vue.use(TimelineItem);
+Vue.use(ColorPicker);
+Vue.use(Tooltip);
+Vue.use(Menu);
+Vue.use(MenuItem);
+Vue.use(Popover);

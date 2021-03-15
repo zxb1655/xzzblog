@@ -1,0 +1,134 @@
+
+.card-swiper {
+	margin-top: -260rpx;
+}
+.article {
+	margin-bottom: 120rpx;
+}
+.gifimage {
+	margin-top: -160rpx;
+}
+.tower-swiper .tower-item {
+	-webkit-transform: scale(calc(0.5 + var(--index) / 10));
+	        transform: scale(calc(0.5 + var(--index) / 10));
+	margin-left: calc(var(--left) * 100rpx - 150rpx);
+	z-index: var(--index);
+}
+.home {
+	position: absolute;
+	left: 5%;
+	top: 4%;
+	z-index: 10000;
+}
+page {
+	background-image: var(--gradualBlue);
+	width: 100vw;
+	overflow: hidden;
+}
+.DrawerPage {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	left: 0vw;
+	background-color: #f1f1f1;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.DrawerPage.show {
+	-webkit-transform: scale(0.9, 0.9);
+	        transform: scale(0.9, 0.9);
+	left: 85vw;
+	box-shadow: 0 0 60rpx rgba(0, 0, 0, 0.2);
+	-webkit-transform-origin: 0;
+	        transform-origin: 0;
+}
+.DrawerWindow {
+	position: absolute;
+	width: 85vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	-webkit-transform: scale(0.9, 0.9) translateX(-100%);
+	        transform: scale(0.9, 0.9) translateX(-100%);
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	padding: 100rpx 0;
+	z-index: 999;
+}
+.DrawerWindow.show {
+	-webkit-transform: scale(1, 1) translateX(0%);
+	        transform: scale(1, 1) translateX(0%);
+	opacity: 1;
+	pointer-events: all;
+}
+.DrawerClose {
+	position: absolute;
+	width: 40vw;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	color: transparent;
+	padding-bottom: 30rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	        align-items: flex-end;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.6));
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.6));
+	letter-spacing: 5px;
+	font-size: 50rpx;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.DrawerClose.show {
+	opacity: 1;
+	pointer-events: all;
+	width: 15vw;
+	color: #fff;
+}
+.DrawerPage .cu-bar.tabbar .action button.cuIcon {
+	width: 64rpx;
+	height: 64rpx;
+	line-height: 64rpx;
+	margin: 0;
+	display: inline-block;
+}
+.DrawerPage .cu-bar.tabbar .action .cu-avatar {
+	margin: 0;
+}
+.DrawerPage .nav {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.DrawerPage .nav .cu-item.cur {
+	border-bottom: 0;
+	position: relative;
+}
+.DrawerPage .nav .cu-item.cur::after {
+	content: "";
+	width: 10rpx;
+	height: 10rpx;
+	background-color: currentColor;
+	position: absolute;
+	bottom: 10rpx;
+	border-radius: 10rpx;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.DrawerPage .cu-bar.tabbar .action {
+	-webkit-box-flex: initial;
+	-webkit-flex: initial;
+	        flex: initial;
+}
+

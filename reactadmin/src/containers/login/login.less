@@ -1,0 +1,69 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 5vw;
+  background-image: url('./images/bg.jpg');
+  background-size: 100% 100%;
+
+  .container {
+    width: 26vw;
+    height: 26vw;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #9bc3f91c;
+    box-shadow: 5px 5px 5px #aaced8,
+      -1px -1px 10px #a1d1de;
+
+    .login-content {
+      width: 100%;
+      height: 103%;
+      border-radius: 50%;
+      background-image: url('./images/login_bg.png');
+      background-size: 100% 100%;
+      position: relative;
+
+      .login-form {
+        width: 100%;
+
+        .ant-form-item-control-input {
+          width: 52%;
+          min-height: 0;
+        }
+
+        .ant-form-item-explain.ant-form-item-explain-error {
+          text-align: left;
+          padding: 3px 0;
+        }
+
+        position: absolute;
+        left: 6vw;
+        bottom: 2.8vw;
+
+        .login-form-button {
+          width: 130%;
+          height: 4.6vw;
+          border-radius: 50%;
+          position: absolute;
+          bottom: -70px;
+          left: -1.8vw;
+          opacity: .7;
+          font-size: 30px;
+          padding-bottom: 16px;
+          font-family: cursive;
+          font-weight: bold;
+          box-shadow: 10px 0 10px #3498db;
+          background: linear-gradient(#1890ff, #5de8e838);
+          transition: .4s;
+
+          &:hover {
+            background: linear-gradient(#4494bb, #a9c9dc);
+            bottom: -75px;
+            border-radius: 60%;
+          }
+        }
+      }
+    }
+  }
+}

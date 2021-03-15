@@ -1,0 +1,43 @@
+
+.tabbar.data-v-05aef2f4 {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.toc.data-v-05aef2f4 {
+	text-align: left;
+}
+.radius.data-v-05aef2f4 {
+	border-radius: 20rpx;
+}
+.mt-10.data-v-05aef2f4 {
+	margin-top: 10rpx;
+}
+.content.data-v-05aef2f4{
+	margin-bottom: -50rpx;
+}
+
+/*-------左上角按钮-------*/
+.canui-head-box.data-v-05aef2f4 {
+	position: fixed;
+	margin-left: 10px;
+	background: rgba(0, 0, 0, 0.2);
+	color: #fff;
+	border-radius: 20px;
+	padding: 4px 4px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	z-index: 9999;
+}
+.canui-head-box navigator.data-v-05aef2f4 {
+	padding: 8px;
+	font-size: 20px;
+	display: initial;
+}
+.canui-head-box navigator+navigator.data-v-05aef2f4 {
+	border-left: 1px solid rgba(255, 255, 255, 0.3);
+	margin: 0 3px;
+	padding: 0 5px;
+	padding-left: 15px;
+}
+

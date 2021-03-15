@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "weixin-parse-template": "/components/feng-parse/components/wxParseTemplate7",
+    "weixin-parse-img": "/components/feng-parse/components/wxParseImg",
+    "weixin-parse-video": "/components/feng-parse/components/wxParseVideo",
+    "weixin-parse-audio": "/components/feng-parse/components/wxParseAudio",
+    "weixin-parse-table": "/components/feng-parse/components/wxParseTable"
+  }
+}
