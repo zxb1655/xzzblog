@@ -69,8 +69,8 @@ module.exports = (app) => {
     storage: MAO({
       config: {
         region: 'oss-cn-guangzhou', // // 阿里云oss的所在区域
-        accessKeyId: 'LTAI4GJPjQzRS25WpBKvyuM9', // 阿里云oss的accessKeyId，要自己去创建
-        accessKeySecret: 'VLv1IFwFO6PUlMq5zOXBvwaAa0DxfP', // 阿里云oss的accessKeySecret
+        accessKeyId: '', // 阿里云oss的accessKeyId，要自己去创建
+        accessKeySecret: '', // 阿里云oss的accessKeySecret
         bucket: 'zxbblog', // 阿里云oss的bucket's name
       },
     }),
