@@ -1,6 +1,3 @@
--- ----------------------------
--- Table structure for article
--- ----------------------------
 DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
