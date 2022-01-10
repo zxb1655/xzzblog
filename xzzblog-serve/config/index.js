@@ -6,9 +6,9 @@ module.exports = {
   SECRET_KEY: "zxbzxb",
   NODEMAILER: {
     email: "204006387@qq.com",
-    pass: "yanuullzyvaubjie",
-    IMAP: "xlsjvgllhynabiab", // qq 授权码 不是qq密码
-    POP3: "yanuullzyvaubjie",
+    pass: "",
+    IMAP: "", // qq 授权码 不是qq密码
+    POP3: "",
   },
   MYSQL: {
     HOST: "127.0.0.1",
@@ -19,8 +19,8 @@ module.exports = {
 
   oss: {
     region: "oss-cn-guangzhou",
-    accessKeyId: "LTAI4GJPjQzRS25WpBKvyuM9",
-    accessKeySecret: "VLv1IFwFO6PUlMq5zOXBvwaAa0DxfP",
+    accessKeyId: "",
+    accessKeySecret: "",
     bucket: "zxbblog",
   },
 
