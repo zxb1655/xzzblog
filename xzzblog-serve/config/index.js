@@ -12,9 +12,9 @@ module.exports = {
   },
   MYSQL: {
     HOST: "127.0.0.1",
-    DATABASE: "myblog",
+    DATABASE: "myblog3",
     USER: "root",
-    PASSWORD: "",
+    PASSWORD: "zxbzxb1655",
   },
 
   oss: {
@@ -25,6 +25,6 @@ module.exports = {
   },
 
   // github
-  client_secret: "f81479d7b37785afec4072e9783d1337a89e5c79",
-  client_id: "280ef327e24a011a6f05",
+  client_secret: "",
+  client_id: "",
 };
