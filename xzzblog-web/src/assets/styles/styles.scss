@@ -1,0 +1,50 @@
+body {
+  cursor: url(https://cdn.jzzz66.cn/normal1.cur), auto;
+}
+a {
+  cursor: pointer;
+}
+
+#app {
+  background: #f0f0f0;
+  font-size: 26px;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, \\5fae\8f6f\96c5\9ed1, Arial, sans-serif;
+}
+
+.lg {
+  background-image: linear-gradient(90deg, #4ebbaa, #6bc30d);
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.dc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-of {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.layout {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.clearfix {
+  clear: both;
+  overflow: hidden;
+}
+
+.pointer {
+  cursor: pointer;
+}

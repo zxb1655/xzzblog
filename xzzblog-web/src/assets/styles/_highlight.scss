@@ -1,0 +1,238 @@
+.markdown-body {
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    // 改变网页高亮文本
+     ::selection {
+        background-color: #005e55 !important;
+        color: none !important;
+    }
+    /*code*/
+    pre {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-bottom: 1.6em;
+        padding: 25px 0!important;
+        max-width: 100%;
+        border-radius: 5px;
+        background: #21252b !important;
+        box-shadow: 0 10px 30px 0px rgba(0, 0, 0, .4);
+        color: #000;
+        text-shadow: none;
+        font: 1.1rem "Microsoft YaHei", "Arial", Sans-Serif;
+        line-height: 1.6;
+        code {
+            color: #c0c5ce;
+        }
+        .lang- {
+            display: inline-block;
+            padding: .5rem;
+            width: 100%;
+            background: #1c1d21;
+        }
+        .hljs-comment,
+        .hljs-quote {
+            color: #b6b18b;
+        }
+        /* Darth Vader */
+        .hljs-variable,
+        .hljs-template-variable,
+        .hljs-tag,
+        .hljs-name,
+        .hljs-selector-id,
+        .hljs-selector-class,
+        .hljs-regexp,
+        .hljs-deletion {
+            color: #eb3c54;
+        }
+        /* Threepio */
+        .hljs-number,
+        .hljs-built_in,
+        .hljs-builtin-name,
+        .hljs-literal,
+        .hljs-type,
+        .hljs-params,
+        .hljs-meta,
+        .hljs-link {
+            color: #e7ce56;
+        }
+        /* Luke Skywalker */
+        .hljs-attribute {
+            color: #ee7c2b;
+        }
+        /* Obi Wan Kenobi */
+        .hljs-string,
+        .hljs-symbol,
+        .hljs-bullet,
+        .hljs-addition {
+            color: #4fb4d7;
+        }
+        /* Yoda */
+        .hljs-title,
+        .hljs-section {
+            color: #78bb65;
+        }
+        /* Mace Windu */
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #b45ea4;
+        }
+        /* Millenium Falcon */
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #1c1d21;
+            color: #c0c5ce;
+        }
+        .hljs-emphasis {
+            font-style: italic;
+        }
+        .hljs-strong {
+            font-weight: bold;
+        }
+    }
+    pre:before {
+        position: absolute;
+        left: 12px;
+        z-index: 2;
+        margin-top: -18px;
+        width: 12px;
+        height: 12px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: #fc625d;
+        -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+        box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+        content: " ";
+    }
+    p code,
+    li>code {
+        display: inline-block;
+        margin: 0px 3px;
+        margin-bottom: 2px;
+        padding: 2px 8px;
+        border: 1px solid #e0e0e0;
+        border-radius: 3px;
+        background-color: #eee;
+        color: #4fb4d7;
+        line-height: 18px;
+    }
+    table tr {
+        border-top: 1px solid #c6cbd1;
+        background-color: #fff;
+    }
+    table th,
+    table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+        color: #333;
+    }
+    ol {
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+    table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+    }
+    #articlesDetails {
+        overflow: inherit !important;
+        padding-bottom: 50px;
+        height: auto !important;
+    }
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: inherit !important;
+        background-color: #d3dce6;
+    }
+    blockquote {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-left: 10px solid #d3dce6;
+        background-color: #eff2f7;
+        color: #d3dce6;
+    }
+    h1 {
+        margin-top: 8px;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: 900;
+        font-size: 22px;
+    }
+    h2 {
+        margin-bottom: 10px;
+        color: #444;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    h3 {
+        margin-bottom: 10px;
+        color: #444;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    h4 {
+        margin-bottom: 10px;
+        color: #555;
+        font-weight: 900;
+        font-size: 17px;
+        line-height: 28px;
+    }
+    blockquote {
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+    p {
+        margin-bottom: 8px;
+        color: rgb(36, 41, 46);
+        font-size: 1.1rem;
+        line-height: 24px;
+    }
+    strong {
+        color: rgb(0, 123, 111);
+    }
+    a {
+        color: #4fb4d7 !important;
+        text-decoration: underline;
+    }
+    em {
+        color: #666;
+    }
+    pre {
+        margin-bottom: 15px;
+        box-shadow: 0px -1px rgba(0, 0, 0, 0.02);
+    }
+    img {
+        display: block;
+        margin: 6px 0px;
+        max-width: 100%;
+        width: auto;
+        cursor: pointer;
+    }
+    blockquote * {
+        margin-bottom: 0px;
+    }
+    a:hover {
+        color: #005e55 !important;
+    }
+    ul {
+        margin-bottom: 14px;
+        padding-left: 28px;
+    }
+    li {
+        color: #24292e;
+        list-style: initial !important;
+    }
+    // .v-note-panel {
+    //     overflow: visible!important;
+    // }
+    // .v-note-navigation-wrapper {
+    //     right: -270px!important;
+    //     bottom: initial!important;
+    //     padding-bottom: 30px;
+    //     width: 250px!important;
+    // }
+}

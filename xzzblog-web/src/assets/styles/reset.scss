@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*font: inherit;*/
+    vertical-align: baseline;
+    font-size: 100%;
+    //user-select: none;
+}
+
+
+/* reset重置 */
+
+del,
+ins,
+u,
+s,
+a,
+a:hover {
+    text-decoration: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /*height: 100%;*/
+    min-height: 100%;
+    width: 100%;
+    //position: relative;
+    font-family: PingFang SC, Hiragino Sans GB, Microsoft Yahei, WenQuanYi Micro Hei, sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: .2rem;
+}
+
+img {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+a {
+    all: unset;
+}
+
+.scroll-bar-hide {
+    &::-webkit-scrollbar {
+        width: 0px;
+        height: 0;
+        /* remove scrollbar space */
+        background: transparent;
+        /* optional: just make scrollbar invisible */
+    }
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button,
+a,
+input {
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}

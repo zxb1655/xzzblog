@@ -1,0 +1,20 @@
+{{#if template}}
+  <template>
+    <div class='page-{{kebabCase name}}'>
+    </div>
+  </template>
+{{/if}}
+
+{{#if script}}
+  <script>
+    export default { name: '{{kebabCase name}}', data () { return { }; }, created () { }, mounted () { }, methods: { }
+    };
+  </script>
+{{/if}}
+
+{{#if style}}
+  <style lang='less'>
+    .page-{{kebabCase name}}
+    { .page(); }
+  </style>
+{{/if}}

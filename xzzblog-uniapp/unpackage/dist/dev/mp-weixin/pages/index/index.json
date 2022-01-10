@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "type-writer": "/components/typeWriter/typeWriter",
+    "uni-pagination": "/components/uni-pagination/uni-pagination"
+  }
+}

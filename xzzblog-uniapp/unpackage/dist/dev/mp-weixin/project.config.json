@@ -1,0 +1,28 @@
+{
+    "description": "项目配置文件。",
+    "packOptions": {
+        "ignore": []
+    },
+    "setting": {
+        "urlCheck": false,
+        "minified": true
+    },
+    "compileType": "miniprogram",
+    "libVersion": "",
+    "appid": "wx318733b0a395fd71",
+    "projectname": "小猪猪博客",
+    "condition": {
+        "search": {
+            "list": []
+        },
+        "conversation": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": []
+        }
+    }
+}

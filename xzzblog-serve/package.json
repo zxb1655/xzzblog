@@ -1,0 +1,28 @@
+{
+  "name": "blog-koa2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon myblog.js",
+    "prod": "cross-env NODE_ENV=production pm2 start pm2.conf.json"
+  },
+  "dependencies": {
+    "ali-oss": "^6.16.0",
+    "axios": "^0.19.0",
+    "cross-env": "^5.2.0",
+    "crypto": "^1.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.3.0",
+    "koa-body": "^4.1.0",
+    "koa-cors": "^0.0.16",
+    "koa-http-request": "^2.2.1",
+    "koa-onerror": "^3.1.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^3.0.0",
+    "moment": "^2.24.0",
+    "mysql2": "^1.6.5",
+    "nodemailer": "^6.7.2",
+    "qiniu": "^7.2.2",
+    "sequelize": "4.37.10"
+  }
+}
