@@ -1,25 +1,24 @@
 ### 前言
 
-这个项目是为了学习而写的，刚好学习了 node，然后之前就一直想写个自己的博客系统，可以更方便记录自己的学习知识体系
-本项目的前后端代码都是放在这个仓库里的，后台管理 admin，服务端 serve，PC 前台 web，移动端和小程序前台 uniapp。
-部署在腾讯学生云服务上，大学自学的时候买好几年了学生云服务器和域名，平时随便折腾，学习 Linux、跑跑脚本、建站、搭博客，
-特别爽，能自己部署网站对于学习前端兴致也更高了。
+这个项目主要是为了学习而写的，刚好学习了 node，然后就一直想写个自己的博客系统，可以更方便记录自己的学习知识体系。  
+本项目的前后端代码都是放在这个仓库里的，后台管理 admin，服务端 serve，PC 前台 web，移动端和小程序前台 uniapp。  
+部署在腾讯学生云服务上，大学自学的时候买好几年了学生云服务器和域名，平时随便折腾，学习 Linux、跑跑脚本、建站、搭博客，特别爽，能自己部署网站对于学习前端兴致也更高了。
 
 ### 主要技术栈
 
-后台管理系统：vue + elementui + vuex + vue-router + mavon-editor
-服务端：koa + mysql + sequelize + jsonwebtoken
-PC 前台：vue + elementui + vuex + vue-router
-移动端和小程序：uniapp
+- 后台管理系统：vue + elementui + vuex + vue-router + mavon-editor
+- 服务端：koa + mysql + sequelize + jsonwebtoken
+- PC 前台：vue + elementui + vuex + vue-router
+- 移动端和小程序：uniapp
 
 ### 项目预览
 
-PC 前台： http://blog.jzzz66.cn
-移动 H5: http://mblog.jzzz66.cn
-微信小程序： 猪猪博客  
-<img width="300" src="https://cdn.jzzz66.cn/weiblog.jpeg"/>
+- PC 前台： http://blog.jzzz66.cn
+- 移动 H5: http://mblog.jzzz66.cn
+- 微信小程序： 猪猪博客  
+  <img width="300" src="https://cdn.jzzz66.cn/weiblog.jpeg"/>
 
-### 环境配置修改
+### 运行环境配置修改
 
 - 创建数据库 myblog 并导入项目根目录下的 xzzblog.sql  
   推荐使用软件 Navicat 创建和管理数据库，也可以用以下命令创建：
