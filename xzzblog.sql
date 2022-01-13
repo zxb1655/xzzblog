@@ -54,6 +54,31 @@ BEGIN;
 COMMIT;
 
 -- ----------------------------
+-- Table structure for category
+-- ----------------------------
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `author` varchar(30) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- ----------------------------
+-- Records of category
+-- ----------------------------
+BEGIN;
+INSERT INTO `category` VALUES (3, 'Node', 'admin', '2021-12-06 14:15:37', '2022-01-07 09:16:13');
+INSERT INTO `category` VALUES (6, 'Vue', 'admin', '2021-12-18 09:44:12', '2022-01-07 09:07:37');
+INSERT INTO `category` VALUES (8, '小程序', 'admin', '2021-12-20 12:49:53', '2021-12-20 12:49:53');
+INSERT INTO `category` VALUES (10, 'Js', 'admin', '2022-01-07 09:07:57', '2022-01-07 09:07:57');
+INSERT INTO `category` VALUES (11, '移动端', 'admin', '2022-01-07 09:08:08', '2022-01-07 09:08:08');
+INSERT INTO `category` VALUES (12, 'React', 'admin', '2022-01-07 09:08:16', '2022-01-07 09:08:16');
+INSERT INTO `category` VALUES (13, '其它', 'admin', '2022-01-07 09:08:26', '2022-01-07 09:08:26');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for articleTocategory
 -- ----------------------------
 DROP TABLE IF EXISTS `articleTocategory`;
@@ -82,31 +107,6 @@ INSERT INTO `articleTocategory` VALUES (25, 6, 14, '2022-01-07 10:00:40', '2022-
 INSERT INTO `articleTocategory` VALUES (26, 10, 14, '2022-01-07 10:00:40', '2022-01-07 10:00:40');
 COMMIT;
 
--- ----------------------------
--- Table structure for category
--- ----------------------------
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE `category` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) NOT NULL,
-  `author` varchar(30) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- ----------------------------
--- Records of category
--- ----------------------------
-BEGIN;
-INSERT INTO `category` VALUES (3, 'Node', 'admin', '2021-12-06 14:15:37', '2022-01-07 09:16:13');
-INSERT INTO `category` VALUES (6, 'Vue', 'admin', '2021-12-18 09:44:12', '2022-01-07 09:07:37');
-INSERT INTO `category` VALUES (8, '小程序', 'admin', '2021-12-20 12:49:53', '2021-12-20 12:49:53');
-INSERT INTO `category` VALUES (10, 'Js', 'admin', '2022-01-07 09:07:57', '2022-01-07 09:07:57');
-INSERT INTO `category` VALUES (11, '移动端', 'admin', '2022-01-07 09:08:08', '2022-01-07 09:08:08');
-INSERT INTO `category` VALUES (12, 'React', 'admin', '2022-01-07 09:08:16', '2022-01-07 09:08:16');
-INSERT INTO `category` VALUES (13, '其它', 'admin', '2022-01-07 09:08:26', '2022-01-07 09:08:26');
-COMMIT;
 
 -- ----------------------------
 -- Table structure for message
