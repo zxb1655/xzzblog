@@ -11,10 +11,14 @@
 - PC 前台：vue + elementui + vuex + vue-router
 - 移动端和小程序：uniapp
 
+### 视频预览
+
+- B 站视频预览： https://www.bilibili.com/video/BV1Ur4y1v7ko/
+
 ### 项目预览
 
 - PC 前台： http://blog.jzzz66.cn
-- 移动 H5: http://mblog.jzzz66.cn
+- 移动 H5： http://mblog.jzzz66.cn
 - 微信小程序： 猪猪博客  
   <img width="300" src="https://cdn.jzzz66.cn/weiblog.jpeg"/>
 
