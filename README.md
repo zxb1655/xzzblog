@@ -11,9 +11,9 @@
 - PC 前台：vue + elementui + vuex + vue-router
 - 移动端和小程序：uniapp
 
-### 视频预览
+### 视频演示
 
-- B 站视频预览： https://www.bilibili.com/video/BV1Ur4y1v7ko/
+- b 站视频详细演示： https://www.bilibili.com/video/BV1Ur4y1v7ko/
 
 ### 项目预览
 
