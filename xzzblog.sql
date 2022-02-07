@@ -21,8 +21,8 @@ CREATE TABLE `article` (
 BEGIN;
 INSERT INTO `article` VALUES (10, '博客介绍', 'admin', '博客介绍', '13', 'http://blogserve.jzzz66.cn/upload/article/48ce90c459379b94fbb40918c3e23e85.2022-01-07-09-48-49.jpeg', 'article', '## 1、开发初衷\n希望把自己日常工作以及学习生活中学到的知识点或者遇到的难题，亦或是有趣的事情记录下来\n\n## 2、预览地址\n博客在线地址：[http://blog.jzzz66.cn](http://blog.jzzz66.cn)\n后台在线地址：[http://blogadmin.jzzz66.cn](http://blogadmin.jzzz66.cn)\nAndroid App下载：高速下载地址\n微信小程序： 猪猪博客\n\n后台账号: admin  后台密码：admin  \n可以进入后台查看\n\n项目还未完成，很多功能还在编写以及新增，特别是小程序及App，很多都还没实现，很多功能也还待优化中。\n\n## 3、技术介绍\n- 服务端技术栈： node，express，mongodb，\n- 前台技术栈: vue，vuex，vue-router，axios，elementUi，sass\n- 后台管理技术栈：react，react-router，react-redux，antd，axios，less\n- 移动端技术栈：uniapp，color-ui，\n- 开发工具工具: vscode', 0, 0, '2022-01-07 09:49:38', '2022-01-07 09:49:38');
 INSERT INTO `article` VALUES (11, 'react中的setState机制引发的坑', 'admin', 'react中的setState机制引发的坑', '12', 'http://blogserve.jzzz66.cn/upload/article/22.2022-01-07-09-53-38.jpeg', 'article', '## 问题\n今天在做项目的过程中，在class一个组件内，因为一个函数中的逻辑有些复杂，于是拆成若干个函数，\n然后在一个函数中调用其他函数，但是运行的时候发现并不能运行出正常的结果。如以下函数，\n\n```\nsetEnterTime(time){\n  this.setState({\n    enterTime:time\n  });	\n  this.findMin()\n}\n\n```\n\n## 解决过程\n使用浏览器对变量进行排查，发现enterTime并没有成功赋值，所以导致后面的计算结果出现了错误\n发现是react的this.setState更新机制导致的。\n\nsetState 通过一个队列机制实现 state 更新。\n当执行 setState 时，会将需要更新的 state 合并后放入状态队列，而不会立刻更新 this.state，队列机制可以高效地批量更新 state。\n\n所以在使用setState更新后，并没有立即更新，而是先执行了后面的函数，所以出现了错误。\n\n## 解决方法\n使用setState的第二个参数，当setState结束并重新呈现该组件时将被调用。\n\n```\nsetEnterTime(time){\n      this.setState({\n	enterTime:time\n      },()=>{\n	this.findMin();\n      });\n}\n\n```\n\n\n另外，如果不通过setState 而直接修改 this.state 的值，那么该 state 将不会被放入状态队列中，当下次调用setState 并对状态队列进行合并时，将会忽略之前直接被修改的 state，而造成无法预知的错误。', 1, 0, '2022-01-07 09:53:40', '2022-01-07 10:01:15');
-INSERT INTO `article` VALUES (12, 'Vue点击返回顶部功能', 'admin', 'Vue点击返回顶部功能', '6', 'http://blogserve.jzzz66.cn/upload/article/33.2022-01-07-09-54-10.jpeg', 'article', '一开始直接用window.scrollTo的时候，发现一瞬间就滚上去了，不是我想要的效果，后来就要定时器实现了平滑滚动。\n```\nlet timer = setInterval(() => {\n          let ispeed = Math.floor(-this.$refs.content.offsetTop / 7)\n          document.documentElement.scrollTop = this.scrollTop + ispeed\n          if (that.scrollTop === 0) {\n            clearInterval(timer)\n          }\n        }, 10)\n```\n\n后来查MDN的时候，原来scrollTo可以传另外的参数。\n```\nwindow.scrollTo(x-coord,y-coord )\nwindow.scrollTo(options)\n```\n\n- x-coord 是文档中的横轴坐标。\n- y-coord 是文档中的纵轴坐标。\n- options 是一个包含三个属性的对象。\n\n1、top  等同于  y-coord\n2、left  等同于  x-coord\n3、ehavior 类型String,表示滚动行为,支持参数 smooth(平滑滚动),instant(瞬间滚动),默认值auto\n```\nwindow.scrollTo( 0, 1000 );  // 设置滚动行为改为平滑的滚动 \nwindow.scrollTo({    top: 1000,     behavior: \"smooth\" });\n```\n所以就直接设置behavior:smooth就可以了\n```\nwindow.scrollTo({\n        top: this.$refs.content.offsetTop - 135,\n        behavior: \"smooth\",\n      });\n```', 1, 0, '2022-01-07 09:56:49', '2022-01-07 10:01:11');
-INSERT INTO `article` VALUES (13, '判断是IOS系统还是android系统', 'admin', '判断是IOS系统还是android系统', '10', 'http://blogserve.jzzz66.cn/upload/article/44.2022-01-07-09-57-15.jpeg', 'article', '```\nfunction detect(){\n         var equipmentType = \"\";\n         var agent = navigator.userAgent.toLowerCase();\n         var android = agent.indexOf(\"android\");\n         var iphone = agent.indexOf(\"iphone\");\n         var ipad = agent.indexOf(\"ipad\");\n         if(android != -1){\n             equipmentType = \"android\";\n         }\n         if(iphone != -1 || ipad != -1){\n             equipmentType = \"ios\";\n         }\n         return equipmentType;\n     }\n```', 1, 0, '2022-01-07 09:57:35', '2022-01-07 10:01:06');
+INSERT INTO `article` VALUES (12, 'Vue点击返回顶部功能', 'admin', 'Vue点击返回顶部功能', '6', 'http://blogserve.jzzz66.cn/upload/article/33.2022-01-07-09-54-10.jpeg', 'article', '一开始直接用window.scrollTo的时候，发现一瞬间就滚上去了，不是我想要的效果，后来就要定时器实现了平滑滚动。\n```\nlet timer = setInterval(() => {\n          let ispeed = Math.floor(-this.$refs.content.offsetTop / 7)\n          document.documentElement.scrollTop = this.scrollTop + ispeed\n          if (that.scrollTop === 0) {\n            clearInterval(timer)\n          }\n        }, 10)\n```\n\n后来查MDN的时候，原来scrollTo可以传另外的参数。\n```\nwindow.scrollTo(x-coord,y-coord )\nwindow.scrollTo(options)\n```\n\n- x-coord 是文档中的横轴坐标。\n- y-coord 是文档中的纵轴坐标。\n- options 是一个包含三个属性的对象。\n\n1、top  等同于  y-coord\n2、left  等同于  x-coord\n3、ehavior 类型String,表示滚动行为,支持参数 smooth(平滑滚动),instant(瞬间滚动),默认值auto\n```\nwindow.scrollTo( 0, 1000 );  // 设置滚动行为改为平滑的滚动 \nwindow.scrollTo({    top: 1000,     behavior: \"smooth\" });\n```\n所以就直接设置behavior:smooth就可以了\n```\nwindow.scrollTo({\n        top: this.$refs.content.offsetTop - 135,\n        behavior: \"smooth\",\n      });\n```', 1, 0, '2022-01-07 09:56:49', '2022-01-07 10:01:11');
+INSERT INTO `article` VALUES (13, '判断是IOS系统还是android系统', 'admin', '判断是IOS系统还是android系统', '10', 'http://blogserve.jzzz66.cn/upload/article/44.2022-01-07-09-57-15.jpeg', 'article', '```\nfunction detect(){\n         var equipmentType = \"\";\n         var agent = navigator.userAgent.toLowerCase();\n         var android = agent.indexOf(\"android\");\n         var iphone = agent.indexOf(\"iphone\");\n         var ipad = agent.indexOf(\"ipad\");\n         if(android != -1){\n             equipmentType = \"android\";\n         }\n         if(iphone != -1 || ipad != -1){\n             equipmentType = \"ios\";\n         }\n         return equipmentType;\n     }\n```', 1, 0, '2022-01-07 09:57:35', '2022-01-07 10:01:06');
 INSERT INTO `article` VALUES (14, '设置ui库中组件的样式无效问题', 'admin', '设置ui库中组件的样式无效问题', '6,10', 'http://blogserve.jzzz66.cn/upload/article/66.2022-01-07-09-59-21.webp', 'article', 'vue文件的样式都是写在<style lang=\"less\" scoped></style>标签中的，加scoped是为了使得样式只在当前页面有效。我们正常写的所有样式，都会被加上[data-v-23d425f8]这个属性，因此会导致修改样式无效。\n![661.jpeg](http://blogserve.jzzz66.cn/upload/article/661.2022-01-07-10-00-09.jpeg)\n第三方组件内部的标签并没有编译为附带[data-v-23d425f8]这个属性。\n所以，我们想修改组件的样式，就没辙了。怎么办呢？\n一开始我是在第三方组件写个class，然后在一个公共的css文件中或者在当前页面再写一个没有socped属性的style标签，然后直接在里面修改第三方组件的样式。\n这样不失为一个方法，但是存在全局污染和命名冲突的问题。约定特定的命名方式，可以避免命名冲突。但是还是不够优雅。\n因此需要解决这个问题，最后通过深度选择器解决了这个问题。\n例如修改上图中组件里的van-ellipsis类的样式，可以这样做：\n```\n.van-tabs /deep/ .van-ellipsis { color: blue}; \n```\n编译后的结果就是：\n![662.png](http://blogserve.jzzz66.cn/upload/article/662.2022-01-07-10-00-33.png)\n这样就不会给van-ellipsis也添加[data-v-23d425f8]属性了。\n就可以成功修改第三方组件的样式了。\n深度选择器/deep/是只能用于less/sass等的，\n如果没有用这些css编译器，可以用>>>符号。', 1, 0, '2022-01-07 10:00:40', '2022-01-07 10:01:00');
 COMMIT;
 
@@ -54,6 +54,31 @@ BEGIN;
 COMMIT;
 
 -- ----------------------------
+-- Table structure for category
+-- ----------------------------
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `author` varchar(30) NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- ----------------------------
+-- Records of category
+-- ----------------------------
+BEGIN;
+INSERT INTO `category` VALUES (3, 'Node', 'admin', '2021-12-06 14:15:37', '2022-01-07 09:16:13');
+INSERT INTO `category` VALUES (6, 'Vue', 'admin', '2021-12-18 09:44:12', '2022-01-07 09:07:37');
+INSERT INTO `category` VALUES (8, '小程序', 'admin', '2021-12-20 12:49:53', '2021-12-20 12:49:53');
+INSERT INTO `category` VALUES (10, 'Js', 'admin', '2022-01-07 09:07:57', '2022-01-07 09:07:57');
+INSERT INTO `category` VALUES (11, '移动端', 'admin', '2022-01-07 09:08:08', '2022-01-07 09:08:08');
+INSERT INTO `category` VALUES (12, 'React', 'admin', '2022-01-07 09:08:16', '2022-01-07 09:08:16');
+INSERT INTO `category` VALUES (13, '其它', 'admin', '2022-01-07 09:08:26', '2022-01-07 09:08:26');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for articleTocategory
 -- ----------------------------
 DROP TABLE IF EXISTS `articleTocategory`;
@@ -82,31 +107,6 @@ INSERT INTO `articleTocategory` VALUES (25, 6, 14, '2022-01-07 10:00:40', '2022-
 INSERT INTO `articleTocategory` VALUES (26, 10, 14, '2022-01-07 10:00:40', '2022-01-07 10:00:40');
 COMMIT;
 
--- ----------------------------
--- Table structure for category
--- ----------------------------
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE `category` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) NOT NULL,
-  `author` varchar(30) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- ----------------------------
--- Records of category
--- ----------------------------
-BEGIN;
-INSERT INTO `category` VALUES (3, 'Node', 'admin', '2021-12-06 14:15:37', '2022-01-07 09:16:13');
-INSERT INTO `category` VALUES (6, 'Vue', 'admin', '2021-12-18 09:44:12', '2022-01-07 09:07:37');
-INSERT INTO `category` VALUES (8, '小程序', 'admin', '2021-12-20 12:49:53', '2021-12-20 12:49:53');
-INSERT INTO `category` VALUES (10, 'Js', 'admin', '2022-01-07 09:07:57', '2022-01-07 09:07:57');
-INSERT INTO `category` VALUES (11, '移动端', 'admin', '2022-01-07 09:08:08', '2022-01-07 09:08:08');
-INSERT INTO `category` VALUES (12, 'React', 'admin', '2022-01-07 09:08:16', '2022-01-07 09:08:16');
-INSERT INTO `category` VALUES (13, '其它', 'admin', '2022-01-07 09:08:26', '2022-01-07 09:08:26');
-COMMIT;
 
 -- ----------------------------
 -- Table structure for message
