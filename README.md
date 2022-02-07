@@ -25,13 +25,11 @@
 ### 运行环境配置修改
 
 - 创建数据库 myblog 并导入项目根目录下的 xzzblog.sql  
-  推荐使用软件 Navicat 创建和管理数据库，也可以用以下命令创建：
+  推荐使用软件 Navicat 创建和管理数据库.
+  后台初始账号：admin
+  后台初始密码：123456
 
-```
-CREATE SCHEMA `myblog` DEFAULT CHARACTER SET utf8mb4 ;
-```
-
-> 注意数据库字符编码为 utf8mb4
+> 注意数据库字符编码为：utf8mb4 排序规则为：utf8mb4_unicode_ci
 
 - 更改配置
   xzzblog-serve/config/index.js
